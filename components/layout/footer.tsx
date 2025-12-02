@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
+import Image from "next/image"
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowRight, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -121,32 +122,15 @@ export function Footer() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
+                className="mb-4"
               >
-                <motion.div
-                  animate={{
-                    backgroundPosition: ["0%", "100%"],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  }}
-                  className="flex items-center space-x-2 mb-4"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 via-green-500 to-blue-500 p-0.5">
-                    <div className="w-full h-full rounded-lg bg-slate-900 flex items-center justify-center">
-                      <span className="text-xl font-bold font-display bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 bg-clip-text text-transparent">
-                        B
-                      </span>
-                    </div>
-                  </div>
-                  <div>
-                    <span className="text-2xl font-bold font-display bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 bg-clip-text text-transparent">
-                      Bizsun
-                    </span>
-                    <span className="text-sm text-white/60 ml-2">Creative</span>
-                  </div>
-                </motion.div>
+                <Image
+                  src="/Bizsun Logo.png"
+                  alt="Bizsun Creative"
+                  width={150}
+                  height={50}
+                  className="h-12 w-auto object-contain"
+                />
               </motion.div>
               
               <p className="text-white/70 leading-relaxed max-w-md">

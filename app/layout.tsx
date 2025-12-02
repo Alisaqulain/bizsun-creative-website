@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/footer"
 import { Preloader } from "@/components/layout/preloader"
 import { ScrollProgress } from "@/components/layout/scroll-progress"
 import { ToastProvider } from "@/components/ui/toast"
+import { Chatbox } from "@/components/layout/chatbox"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -66,6 +67,11 @@ export const metadata: Metadata = {
   verification: {
     google: "your-google-verification-code",
   },
+  icons: {
+    icon: "/Bizsun Logo.png",
+    shortcut: "/Bizsun Logo.png",
+    apple: "/Bizsun Logo.png",
+  },
 }
 
 export default function RootLayout({
@@ -79,7 +85,7 @@ export default function RootLayout({
     name: "Bizsun Creative",
     description: "Digital branding and marketing agency creating experiences that grow brands",
     url: "https://bizsuncreative.com",
-    logo: "https://bizsuncreative.com/logo.png",
+    logo: "https://bizsuncreative.com/Bizsun Logo.png",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+1-234-567-890",
@@ -115,6 +121,7 @@ export default function RootLayout({
             <Navbar />
             <main className="min-h-screen">{children}</main>
             <Footer />
+            <Chatbox />
           </ToastProvider>
         </ThemeProvider>
       </body>

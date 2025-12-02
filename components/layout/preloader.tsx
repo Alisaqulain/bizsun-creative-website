@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 
 export function Preloader() {
@@ -134,20 +135,21 @@ export function Preloader() {
             >
               <motion.div
                 animate={{
-                  rotate: [0, 360],
                   scale: [1, 1.1, 1],
                 }}
                 transition={{
-                  rotate: { duration: 3, repeat: Infinity, ease: "linear" },
                   scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
                 }}
-                className="w-24 h-24 rounded-2xl bg-gradient-to-br from-orange-500 via-green-500 to-blue-500 p-1"
+                className="relative"
               >
-                <div className="w-full h-full rounded-xl bg-slate-900 flex items-center justify-center">
-                  <span className="text-3xl font-bold font-display bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 bg-clip-text text-transparent">
-                    B
-                  </span>
-                </div>
+                <Image
+                  src="/Bizsun Logo.png"
+                  alt="Bizsun Creative"
+                  width={200}
+                  height={80}
+                  className="h-20 w-auto object-contain"
+                  priority
+                />
               </motion.div>
               
               {/* Rotating rings */}
@@ -163,6 +165,10 @@ export function Preloader() {
                   className={`absolute inset-0 border-${i === 0 ? 'orange' : i === 1 ? 'green' : 'blue'}-500/30 border-2 rounded-2xl`}
                   style={{
                     padding: `${(i + 1) * 8}px`,
+                    top: '-20px',
+                    left: '-20px',
+                    right: '-20px',
+                    bottom: '-20px',
                   }}
                 />
               ))}
@@ -194,26 +200,6 @@ export function Preloader() {
                 />
               ))}
             </div>
-
-            {/* Brand name */}
-            <motion.div
-              variants={itemVariants}
-              className="text-center"
-            >
-              <motion.h2
-                animate={{
-                  backgroundPosition: ["0%", "100%"],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }}
-                className="text-2xl font-bold font-display bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 bg-clip-text text-transparent bg-[length:200%_auto]"
-              >
-                Bizsun Creative
-              </motion.h2>
-            </motion.div>
 
             {/* Progress bar */}
             <div className="w-64 h-1 bg-slate-700 rounded-full overflow-hidden">

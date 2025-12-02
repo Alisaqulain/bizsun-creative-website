@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Menu, X, Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
@@ -66,10 +67,14 @@ export function Navbar() {
               className="flex items-center space-x-2 z-50 relative"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <span className="text-2xl font-bold font-display bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                Bizsun
-              </span>
-              <span className="text-sm text-muted-foreground">Creative</span>
+              <Image
+                src="/Bizsun Logo.png"
+                alt="Bizsun Creative"
+                width={120}
+                height={40}
+                className="h-10 w-auto object-contain"
+                priority
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -182,10 +187,14 @@ export function Navbar() {
                   className="flex items-center space-x-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <span className="text-2xl font-bold font-display bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                    Bizsun
-                  </span>
-                  <span className="text-sm text-muted-foreground">Creative</span>
+                  <Image
+                    src="/Bizsun Logo.png"
+                    alt="Bizsun Creative"
+                    width={120}
+                    height={40}
+                    className="h-10 w-auto object-contain"
+                    priority
+                  />
                 </Link>
                 <Button
                   variant="ghost"

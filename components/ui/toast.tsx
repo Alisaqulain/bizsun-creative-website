@@ -53,6 +53,11 @@ const textColorMap = {
 
 export function ToastProvider({ children }: { children: ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([])
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const addToast = (toast: Omit<Toast, "id">) => {
     const id = Math.random().toString(36).substring(7)
@@ -72,7 +77,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   return (
     <ToastContext.Provider value={{ toasts, addToast, removeToast }}>
       {children}
-      <ToastContainer toasts={toasts} removeToast={removeToast} />
+      {mounted && <ToastContainer toasts={toasts} removeToast={removeToast} />}
     </ToastContext.Provider>
   )
 }
@@ -84,8 +89,6 @@ function ToastContainer({
   toasts: Toast[]
   removeToast: (id: string) => void
 }) {
-  if (typeof window === 'undefined') return null
-  
   return (
     <div className="fixed top-20 right-4 z-[100] flex flex-col gap-3 w-full max-w-sm pointer-events-none">
       <AnimatePresence>

@@ -6,7 +6,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "About Us | Bizsun Creative",
-  description: "Learn about Bizsun Creative - our story, mission, vision, and the talented team behind our award-winning creative solutions.",
+  description: "Learn about Bizsun Creative - an audio-visual production house with experienced professionals and young creative-technical enthusiasts. Quality is our identity, commitment is our strength.",
 }
 
 export default function AboutPage() {

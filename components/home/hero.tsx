@@ -426,7 +426,7 @@ export function Hero() {
             >
               <Sparkles className="h-4 w-4 text-primary" />
             </motion.div>
-            <span className="text-sm font-semibold text-primary">Award-Winning Creative Agency</span>
+            <span className="text-sm font-semibold text-primary">Audio-Visual Production House</span>
             <motion.div
               animate={{ x: [0, 5, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
@@ -447,7 +447,7 @@ export function Hero() {
               animate={isInView ? "visible" : "hidden"}
               className="mb-2"
             >
-              <span className="block">We Create</span>
+              <span className="block">Professional</span>
             </motion.div>
             <motion.div
               custom={1}
@@ -468,7 +468,7 @@ export function Hero() {
                   }}
                   className="bg-gradient-to-r from-orange-500 via-green-500 to-blue-500 bg-clip-text text-transparent bg-[length:200%_auto]"
                 >
-                  Digital Experiences
+                  Audio-Visual Production
                 </motion.span>
               </span>
             </motion.div>
@@ -478,7 +478,7 @@ export function Hero() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
             >
-              <span className="block">That Grow Brands</span>
+              <span className="block">Services</span>
             </motion.div>
           </motion.h1>
           
@@ -487,20 +487,20 @@ export function Hero() {
             variants={itemVariants}
             className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-4"
           >
-            Transform your brand with{" "}
+            We are an audio-visual production house with{" "}
             <motion.span
               className="text-primary font-semibold"
               animate={{ y: [0, -3, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              cutting-edge
+              experienced professionals
             </motion.span>{" "}
-            design, strategic marketing, and innovative digital solutions that drive{" "}
+            and young creative-technical enthusiasts. Quality is our identity,{" "}
             <motion.span
               className="text-orange-500 font-semibold relative"
               whileHover={{ scale: 1.05 }}
             >
-              real results
+              commitment is our strength
               <motion.span
                 className="absolute -bottom-0.5 left-0 right-0 h-0.5 bg-gradient-to-r from-orange-500/40 via-green-500/40 to-blue-500/40"
                 initial={{ scaleX: 0 }}
@@ -515,7 +515,7 @@ export function Hero() {
           {/* Enhanced CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12 md:mb-16 px-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12 md:mb-16 px-4 w-full"
           >
             <motion.div
               whileHover={{ scale: 1.05, y: -2 }}
@@ -524,7 +524,7 @@ export function Hero() {
               <Button 
                 asChild 
                 size="lg" 
-                className="group relative overflow-hidden bg-primary hover:bg-primary/90 text-base sm:text-lg px-8 sm:px-10 py-6 sm:py-7 rounded-full shadow-xl shadow-primary/30 hover:shadow-2xl hover:shadow-primary/40 transition-all duration-300 w-full sm:w-auto"
+                className="group relative overflow-hidden bg-primary hover:bg-primary/90 text-base sm:text-lg px-8 sm:px-10 py-6 sm:py-7 rounded-full shadow-xl shadow-primary/30 hover:shadow-2xl hover:shadow-primary/40 transition-all duration-300 w-full sm:w-auto min-w-[200px]"
               >
                 <Link href="/contact" className="relative z-10 flex items-center justify-center">
                   <motion.span
@@ -551,7 +551,7 @@ export function Hero() {
                 asChild 
                 variant="outline" 
                 size="lg"
-                className="text-base sm:text-lg px-8 sm:px-10 py-6 sm:py-7 rounded-full border-2 backdrop-blur-md bg-background/60 hover:bg-background/90 transition-all duration-300 hover:border-primary/50 w-full sm:w-auto"
+                className="text-base sm:text-lg px-8 sm:px-10 py-6 sm:py-7 rounded-full border-2 backdrop-blur-md bg-background/60 hover:bg-background/90 transition-all duration-300 hover:border-primary/50 w-full sm:w-auto min-w-[200px]"
               >
                 <Link href="/portfolio" className="flex items-center justify-center">
                   View Our Work

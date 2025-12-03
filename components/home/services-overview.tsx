@@ -10,39 +10,27 @@ import { Button } from "@/components/ui/button"
 const services = [
   {
     icon: Palette,
-    title: "Branding & Creative Design",
-    description: "Craft memorable brand identities that resonate with your audience and stand out in the market.",
-    href: "/services#branding",
-  },
-  {
-    icon: Code,
-    title: "Website Design & Development",
-    description: "Build stunning, high-performance websites that convert visitors into customers.",
-    href: "/services#web",
-  },
-  {
-    icon: TrendingUp,
-    title: "Digital Marketing",
-    description: "Drive growth with SEO, social media marketing, and data-driven strategies.",
-    href: "/services#marketing",
+    title: "Photography Services",
+    description: "Professional photography for lifestyle, fashion, product, and e-commerce shoots with 4K studio setup.",
+    href: "/services#photography",
   },
   {
     icon: Video,
-    title: "Video Editing & Motion Graphics",
-    description: "Create compelling video content that tells your story and engages viewers.",
+    title: "Video Production",
+    description: "Complete video production including TV commercials, digital films, corporate films, and factory shoots.",
     href: "/services#video",
   },
   {
-    icon: Type,
-    title: "Logo & Identity Design",
-    description: "Design distinctive logos and visual identities that represent your brand essence.",
-    href: "/services#logo",
+    icon: TrendingUp,
+    title: "Complete Production",
+    description: "End-to-end production services with executive producers, directors, and experienced professionals.",
+    href: "/services#production",
   },
   {
-    icon: FileText,
-    title: "Content Creation",
-    description: "Produce engaging content that connects with your audience and drives action.",
-    href: "/services#content",
+    icon: Code,
+    title: "Studio & Equipment",
+    description: "Professional studio setup with 4K cameras and modern equipment for all your production needs.",
+    href: "/services#studio",
   },
 ]
 

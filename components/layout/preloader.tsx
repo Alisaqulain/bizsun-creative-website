@@ -228,14 +228,32 @@ export function Preloader() {
               variants={itemVariants}
               className="text-sm text-slate-400 font-medium"
             >
-              {progress < 30
-                ? "Initializing..."
-                : progress < 60
-                ? "Loading assets..."
-                : progress < 90
-                ? "Almost there..."
-                : "Ready!"}
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={progress < 30 ? "init" : progress < 60 ? "load" : progress < 90 ? "almost" : "ready"}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {progress < 30
+                    ? "Initializing..."
+                    : progress < 60
+                    ? "Loading assets..."
+                    : progress < 90
+                    ? "Almost there..."
+                    : "Ready!"}
+                </motion.span>
+              </AnimatePresence>
             </motion.p>
+            
+            {/* Progress percentage */}
+            <motion.div
+              variants={itemVariants}
+              className="text-xs text-slate-500 font-semibold mt-2"
+            >
+              {progress}%
+            </motion.div>
           </div>
 
           {/* Floating particles */}

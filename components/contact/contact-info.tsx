@@ -8,25 +8,25 @@ const contactDetails = [
   {
     icon: Mail,
     title: "Email",
-    content: "hello@bizsuncreative.com",
-    link: "mailto:hello@bizsuncreative.com",
+    content: "info@bizsoncreative.com",
+    link: "mailto:info@bizsoncreative.com",
   },
   {
     icon: Phone,
     title: "Phone",
-    content: "+1 (234) 567-890",
-    link: "tel:+1234567890",
+    content: "+91 70441 78863",
+    link: "tel:+917044178863",
   },
   {
     icon: MapPin,
-    title: "Address",
-    content: "123 Creative Street, Design City, DC 12345",
+    title: "Locations",
+    content: "Mumbai • Delhi • Kolkata",
     link: null,
   },
   {
     icon: Clock,
     title: "Business Hours",
-    content: "Mon - Fri: 9:00 AM - 6:00 PM",
+    content: "Mon - Sat: 9:00 AM - 7:00 PM IST",
     link: null,
   },
 ]
@@ -75,9 +75,9 @@ export function ContactInfo() {
 
       <Card className="border-2 bg-muted/30">
         <CardContent className="pt-6">
-          <h3 className="text-xl font-semibold mb-4">Let&apos;s Work Together</h3>
+          <h3 className="text-xl font-semibold mb-4">Want to have a quick chat?</h3>
           <p className="text-muted-foreground leading-relaxed">
-            Whether you&apos;re looking to rebrand, launch a new website, or grow your digital presence, we&apos;re here to help. Reach out and let&apos;s discuss how we can bring your vision to life.
+            Whether you need photography services, video production, or complete production management, we&apos;re here to help. Reach out and let&apos;s discuss how we can bring your creative vision to life with our professional audio-visual production services.
           </p>
         </CardContent>
       </Card>

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
 import { Quote } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -10,31 +11,17 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "CEO, TechStart Inc.",
-    content: "Bizsun Creative transformed our brand identity completely. Their attention to detail and creative vision exceeded all our expectations. Our engagement has increased by 300% since the rebrand.",
+    name: "Sehrish Qureshi",
+    role: "Brand Head",
+    content: "They always deliver more than what they commit. The value addition is commendable.",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
   },
   {
     id: 2,
-    name: "Michael Chen",
-    role: "Marketing Director, FashionHub",
-    content: "Working with Bizsun was a game-changer. They delivered a stunning website and marketing campaign that perfectly captured our brand essence. The results speak for themselves.",
+    name: "Creative Head",
+    role: "Creative Director",
+    content: "The team pulled the shoot off brilliantly in the stipulated time. Kudos!",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    id: 3,
-    name: "Emily Rodriguez",
-    role: "Founder, GreenLife Co.",
-    content: "The team at Bizsun Creative is incredibly talented and professional. They understood our vision and brought it to life in ways we never imagined. Highly recommended!",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    id: 4,
-    name: "David Kim",
-    role: "Product Manager, InnovateLab",
-    content: "Outstanding work from start to finish. Bizsun's strategic approach to digital marketing helped us reach new audiences and achieve record-breaking growth.",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
   },
 ]
 
@@ -206,10 +193,13 @@ export function Testimonials() {
                       className="relative"
                     >
                       <div className="w-20 h-20 rounded-full overflow-hidden bg-gradient-to-br from-primary/20 to-primary/10 ring-2 ring-primary/30 shadow-lg">
-                        <img
+                        <Image
                           src={testimonials[currentIndex].avatar}
                           alt={testimonials[currentIndex].name}
+                          width={80}
+                          height={80}
                           className="w-full h-full object-cover"
+                          loading="lazy"
                         />
                       </div>
                       <motion.div

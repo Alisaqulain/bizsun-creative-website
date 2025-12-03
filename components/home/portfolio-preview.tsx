@@ -93,12 +93,15 @@ export function PortfolioPreview() {
                   <motion.div
                     whileHover={{ scale: 1.3 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="relative w-full h-full"
                   >
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
                       className="object-cover"
+                      loading="lazy"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </motion.div>
                   

@@ -134,7 +134,7 @@ export function Footer() {
               </motion.div>
               
               <p className="text-white/70 leading-relaxed max-w-md">
-                Creating digital experiences that grow brands. We transform ideas into powerful visual stories that connect with audiences and drive results.
+                An audio-visual production house founded by experienced industry professionals and young creative-technical enthusiasts. Quality is our identity, commitment is our strength.
               </p>
 
               {/* Newsletter Signup */}
@@ -266,10 +266,10 @@ export function Footer() {
                     <Mail className="h-5 w-5 text-orange-400 group-hover:text-white transition-colors" />
                   </motion.div>
                   <a
-                    href="mailto:hello@bizsuncreative.com"
+                    href="mailto:info@bizsoncreative.com"
                     className="text-sm text-white/70 hover:text-white transition-colors flex-1"
                   >
-                    hello@bizsuncreative.com
+                    info@bizsoncreative.com
                   </a>
                 </motion.li>
                 <motion.li
@@ -286,10 +286,10 @@ export function Footer() {
                     <Phone className="h-5 w-5 text-green-400 group-hover:text-white transition-colors" />
                   </motion.div>
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+917044178863"
                     className="text-sm text-white/70 hover:text-white transition-colors flex-1"
                   >
-                    +1 (234) 567-890
+                    +91 70441 78863
                   </a>
                 </motion.li>
                 <motion.li
@@ -306,7 +306,7 @@ export function Footer() {
                     <MapPin className="h-5 w-5 text-blue-400 group-hover:text-white transition-colors" />
                   </motion.div>
                   <span className="text-sm text-white/70 flex-1">
-                    123 Creative Street, Design City, DC 12345
+                    Mumbai • Delhi • Kolkata, India
                   </span>
                 </motion.li>
               </ul>

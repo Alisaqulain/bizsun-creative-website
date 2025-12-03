@@ -5,7 +5,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Contact Us | Bizsun Creative",
-  description: "Get in touch with Bizsun Creative. Let's discuss how we can help transform your brand and drive business growth.",
+  description: "Get in touch with Bizsun Creative. Contact us for photography, video production, and complete production services. Mumbai, Delhi, Kolkata.",
 }
 
 export default function ContactPage() {

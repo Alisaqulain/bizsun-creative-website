@@ -99,10 +99,13 @@ export function Story() {
               className="space-y-4"
             >
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Founded in 2020, Bizsun Creative was born from a simple belief: every brand has a unique story waiting to be told. We started as a small team of passionate designers and marketers, united by our commitment to creating digital experiences that not only look stunning but drive real business results.
+                We are an audio-visual production house founded by experienced industry professionals and young creative-technical enthusiasts. At Bizsun Creative, we bring together the best of both worlds - seasoned expertise and fresh, innovative perspectives.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Over the years, we&apos;ve grown into a full-service creative agency, working with brands across industries to transform their digital presence. From startups to established enterprises, we&apos;ve helped hundreds of companies connect with their audiences in meaningful ways.
+                We nurture the best and experienced professionals in every department to cater to your needs and offer you the finest output that are original as well as unique. Our aim is to grow as a company along with you by providing you the best of our production services.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed font-semibold text-primary">
+                Quality is our identity, commitment is our strength.
               </p>
             </motion.div>
           </div>
@@ -119,10 +122,25 @@ export function Story() {
               transition={{ type: "spring", stiffness: 400 }}
               className="text-xl font-bold mb-4 text-foreground"
             >
-              What Sets Us Apart
+              Our Production Process
             </motion.p>
-            <p className="text-muted-foreground leading-relaxed">
-              We don&apos;t just create beautiful designs—we build strategic solutions. Every project begins with deep research into your industry, audience, and goals. We combine creative excellence with data-driven insights to deliver work that not only looks great but performs exceptionally.
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+              {["Initial Brief", "Ideation/Scripting", "Storyboard", "Execution"].map((step, index) => (
+                <motion.div
+                  key={step}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="text-center p-4 rounded-lg bg-primary/5 border border-primary/20"
+                >
+                  <div className="text-2xl font-bold text-primary mb-2">{index + 1}</div>
+                  <div className="text-sm font-semibold">{step}</div>
+                </motion.div>
+              ))}
+            </div>
+            <p className="text-muted-foreground leading-relaxed mt-4">
+              From concept to final delivery, we follow a structured approach ensuring every project meets the highest standards of quality and creativity. Our team of experienced professionals works collaboratively to bring your vision to life.
             </p>
           </motion.div>
         </div>

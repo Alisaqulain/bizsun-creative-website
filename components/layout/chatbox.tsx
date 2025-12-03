@@ -17,23 +17,23 @@ interface Message {
 
 const initialBotMessage: Message = {
   id: "1",
-  text: "Hello! 👋 Welcome to Bizsun Creative. I'm here to help you learn more about our digital branding and marketing services. How can I assist you today?",
+  text: "Hello! 👋 Welcome to Bizsun Creative. I'm here to help you learn more about our audio-visual production services including photography, video production, and complete production management. How can I assist you today?",
   sender: "bot",
   timestamp: new Date(),
 }
 
 const quickReplies = [
-  "Our Services",
-  "Pricing & Packages",
+  "Photography Services",
+  "Video Production",
   "Contact Information",
-  "View Portfolio",
+  "Our Process",
 ]
 
 const botResponses: Record<string, string> = {
-  "our services": "We offer comprehensive digital solutions:\n\n✨ Brand Identity & Logo Design\n🌐 Website Design & Development\n📱 Social Media Marketing\n🔍 SEO & Digital Marketing\n📊 Content Creation\n🎨 Creative Design Services\n\nWhich service interests you most?",
-  "pricing & packages": "Our pricing is tailored to your needs:\n\n💼 Starter Package - Perfect for small businesses\n🚀 Growth Package - For expanding companies\n⭐ Enterprise Package - Custom solutions\n\nAll packages include consultation and support. Would you like to discuss your specific requirements?",
-  "contact information": "Get in touch with us:\n\n📧 Email: hello@bizsuncreative.com\n📞 Phone: Available on our contact page\n📍 Location: Visit our contact page for details\n💬 Live Chat: You're using it right now!\n\nWe typically respond within 24 hours. For urgent matters, please call us!",
-  "view portfolio": "Great choice! Our portfolio showcases:\n\n🎯 Branding projects across industries\n💻 Modern website designs\n📈 Successful marketing campaigns\n🎨 Creative design work\n\nVisit our Portfolio page to see detailed case studies. What type of work would you like to see?",
+  "photography services": "We offer comprehensive photography services:\n\n📸 Lifestyle Shoots\n👗 Fashion Shoots\n📦 Product Shoots\n🛒 E-commerce Shoots\n📷 Still Photography\n🎬 Studio Setup with 4K Cameras\n\nOur experienced photographers ensure the finest output that's original and unique. What type of photography do you need?",
+  "video production": "Our video production services include:\n\n📺 Television Commercials\n🎥 Digital Films\n🏢 Corporate Films\n🏭 Factory Shoots\n🎬 Complete Production Services\n\nWe handle everything from initial brief to final execution. Would you like to know more about our production process?",
+  "contact information": "Get in touch with us:\n\n📧 Email: info@bizsoncreative.com\n📞 Phone: +91 70441 78863\n📍 Locations: Mumbai, Delhi, Kolkata\n💬 Live Chat: You're using it right now!\n\nWe typically respond within 24 hours. For urgent matters, please call us!",
+  "our process": "Our production process follows these steps:\n\n1️⃣ Initial Brief - Understanding your requirements\n2️⃣ Ideation/Scripting - Creative concept development\n3️⃣ Storyboard - Visual planning\n4️⃣ Execution - Professional production\n\nQuality is our identity, commitment is our strength. Would you like to discuss your project?",
 }
 
 export function Chatbox() {
@@ -63,7 +63,7 @@ export function Chatbox() {
 
     // Service-related queries
     if (lowerMessage.includes("service") || lowerMessage.includes("what do you do") || lowerMessage.includes("what can you do") || lowerMessage.includes("offer")) {
-      return "We specialize in:\n\n✨ Digital Branding & Identity\n🌐 Web Design & Development\n📱 Social Media Marketing\n🔍 SEO & Digital Marketing\n📊 Content Strategy\n🎨 Creative Design\n\nWhich service would you like to know more about?"
+      return "We are an audio-visual production house offering:\n\n📸 Photography Services (Lifestyle, Fashion, Product, E-commerce)\n🎥 Video Production (TV Commercials, Digital Films, Corporate Films)\n🎬 Complete Production Services\n📷 Studio Setup with 4K Cameras\n\nWe have experienced professionals in every department. Which service interests you?"
     }
     
     // Pricing queries

@@ -6,6 +6,7 @@ import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
 import { Preloader } from "@/components/layout/preloader"
 import { ScrollProgress } from "@/components/layout/scroll-progress"
+import { ScrollToTop } from "@/components/layout/scroll-to-top"
 import { ToastProvider } from "@/components/ui/toast"
 import { Chatbox } from "@/components/layout/chatbox"
 
@@ -27,18 +28,18 @@ export const metadata: Metadata = {
     default: "Bizsun Creative | Digital Branding & Marketing Agency",
     template: "%s | Bizsun Creative",
   },
-  description: "We create digital experiences that grow brands. Expert branding, web design, digital marketing, and creative solutions.",
-  keywords: ["branding", "digital marketing", "web design", "creative agency", "brand identity", "website development", "SEO", "social media marketing"],
+  description: "India's premier audio-visual production house. Professional photography, video production, and complete production services. Quality is our identity, commitment is our strength.",
+  keywords: ["audio visual production", "photography services", "video production", "production house", "TV commercials", "corporate films", "fashion photography", "product photography", "e-commerce shoots", "4K studio", "Mumbai", "Delhi", "Kolkata"],
   authors: [{ name: "Bizsun Creative" }],
   creator: "Bizsun Creative",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://bizsuncreative.com",
-    siteName: "Bizsun Creative",
-    title: "Bizsun Creative | Digital Branding & Marketing Agency",
-    description: "We create digital experiences that grow brands.",
-    images: [
+    openGraph: {
+      type: "website",
+      locale: "en_US",
+      url: "https://www.bizsoncreative.com",
+      siteName: "Bizsun Creative",
+      title: "Bizsun Creative | Audio-Visual Production House",
+      description: "Professional photography, video production, and complete production services. Quality is our identity, commitment is our strength.",
+      images: [
       {
         url: "/og-image.jpg",
         width: 1200,
@@ -49,8 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bizsun Creative | Digital Branding & Marketing Agency",
-    description: "We create digital experiences that grow brands.",
+    title: "Bizsun Creative | Audio-Visual Production House",
+    description: "Professional photography, video production, and complete production services. Quality is our identity, commitment is our strength.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -83,14 +84,14 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Bizsun Creative",
-    description: "Digital branding and marketing agency creating experiences that grow brands",
+    description: "Audio-visual production house offering photography, video production, and complete production services. Quality is our identity, commitment is our strength.",
     url: "https://bizsuncreative.com",
-    logo: "https://bizsuncreative.com/Bizsun Logo.png",
+    logo: "https://www.bizsoncreative.com/Bizsun Logo.png",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+1-234-567-890",
+      telephone: "+91-70441-78863",
       contactType: "customer service",
-      email: "hello@bizsuncreative.com",
+      email: "info@bizsoncreative.com",
     },
     sameAs: [
       "https://www.facebook.com/bizsuncreative",
@@ -103,6 +104,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta name="theme-color" content="#F97316" />
+        <meta name="format-detection" content="telephone=no" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -121,6 +125,7 @@ export default function RootLayout({
             <Navbar />
             <main className="min-h-screen">{children}</main>
             <Footer />
+            <ScrollToTop />
             <Chatbox />
           </ToastProvider>
         </ThemeProvider>
